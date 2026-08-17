@@ -2,7 +2,7 @@
 name = "api-tissus"
 version = "0.1.0"
 description = "API de classification de tissus"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.13"
 dependencies = [
     "fastapi",
     "uvicorn",
