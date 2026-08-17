@@ -1,0 +1,12 @@
+[project]
+name = "api-tissus"
+version = "0.1.0"
+description = "API de classification de tissus"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "tensorflow==2.17.1",
+    "pillow",
+    "python-multipart",
+]
