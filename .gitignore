@@ -1,2 +1,19 @@
 venv/
 __pycache__/
+*.pyc
+
+# Fichiers sensibles
+.env
+
+# Base de données locale (sera recréée automatiquement au démarrage)
+*.db
+
+# Logs Docker
+docker_build.log
+
+# Fichiers CSV de test
+*.csv
+
+# Dossiers non liés au backend
+mobile_app_flutter/
+web_frontend/
