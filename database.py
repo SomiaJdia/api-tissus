@@ -17,7 +17,9 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./app_tissus.db")
 # PostgreSQL fourni par certains hébergeurs (ex: Render) utilise "postgres://"
 # mais SQLAlchemy requiert "postgresql://" — on corrige automatiquement
 if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql+psycopg2://", 1)
+elif DATABASE_URL.startswith("postgresql://") and "+psycopg" not in DATABASE_URL:
+    DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg2://", 1)
 
 # Les arguments connect_args sont uniquement nécessaires pour SQLite
 connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}

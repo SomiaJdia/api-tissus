@@ -19,6 +19,7 @@ dependencies = [
     "python-jose",
     "bcrypt==4.0.1",
     "psycopg2-binary",
+    "psycopg[binary]",
     "python-dotenv",
     "requests",
     "numpy",
