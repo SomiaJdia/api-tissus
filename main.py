@@ -21,6 +21,22 @@ app = FastAPI()
 creer_tables()
 initialiser_bucket()
 
+# Creation automatique du compte admin au demarrage s'il n'existe pas encore
+try:
+    with SessionLocal() as db_init:
+        if not db_init.query(Utilisateur).filter(Utilisateur.role == "admin").first():
+            db_init.add(Utilisateur(
+                nom="Administrateur",
+                email="admin@etu.uae.ac.ma",
+                mot_de_passe=hacher_mot_de_passe("admin123"),
+                role="admin",
+                doit_changer_mot_de_passe=False
+            ))
+            db_init.commit()
+            print("Compte Admin cree automatiquement au demarrage !")
+except Exception as e:
+    print(f"Avertissement initialisation admin: {e}")
+
 
 app.add_middleware(
     CORSMiddleware,
