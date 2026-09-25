@@ -26,3 +26,6 @@ dependencies = [
 
 [tool.setuptools]
 py-modules = ["main", "auth", "database", "email_service", "minio_service"]
+
+[tool.fastapi]
+entrypoint = "main:app"

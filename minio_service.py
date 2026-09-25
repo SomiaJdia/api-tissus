@@ -71,6 +71,9 @@ def _build_auth_headers(method: str, path: str, payload_bytes: bytes = b"", cont
     return req_headers
 
 def initialiser_bucket() -> bool:
+    # Ignorer si MINIO_ENDPOINT n'est pas accessible ou par d?faut en cloud
+    if 'localhost' in MINIO_ENDPOINT and os.getenv('DATABASE_URL'):
+        return False
     try:
         url = f"{_get_scheme()}://{MINIO_ENDPOINT}/{MINIO_BUCKET}"
         # 1. Vérifier si le bucket existe (HEAD)

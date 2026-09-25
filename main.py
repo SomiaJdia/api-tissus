@@ -8,7 +8,7 @@ import os
 import secrets
 import string
 import csv
-from database import get_db, creer_tables, Utilisateur, DOMAINE_AUTORISE, DOMAINE_ETUDIANT, InfoTissu, HistoriqueAnalyse
+from database import get_db, creer_tables, Utilisateur, DOMAINE_AUTORISE, DOMAINE_ETUDIANT, InfoTissu, HistoriqueAnalyse, SessionLocal
 from auth import hacher_mot_de_passe, verifier_mot_de_passe, creer_token, verifier_token_prof, verifier_token_admin, verifier_token_etudiant, verifier_token_authentifie
 from email_service import envoyer_email_identifiants
 from minio_service import uploader_image_tissu, initialiser_bucket
