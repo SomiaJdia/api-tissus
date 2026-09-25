@@ -23,3 +23,6 @@ dependencies = [
     "requests",
     "numpy",
 ]
+
+[tool.setuptools]
+py-modules = ["main", "auth", "database", "email_service", "minio_service"]
