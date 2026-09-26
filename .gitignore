@@ -1,19 +1,31 @@
+# Environnement Python
 venv/
 __pycache__/
 *.pyc
 
-# Fichiers sensibles
+# Fichiers sensibles et locaux
 .env
-
-# Base de données locale (sera recréée automatiquement au démarrage)
 *.db
 
-# Logs Docker
+# Logs
+*.log
 docker_build.log
 
 # Fichiers CSV de test
 *.csv
 
-# Dossiers non liés au backend
-mobile_app_flutter/
-web_frontend/
+# Frontend Web (ignorer les modules et le dossier de build)
+web_frontend/node_modules/
+web_frontend/dist/
+
+# Application Mobile (ignorer les builds et caches Flutter/Android)
+mobile_app_flutter/.dart_tool/
+mobile_app_flutter/.flutter-plugins
+mobile_app_flutter/.flutter-plugins-dependencies
+mobile_app_flutter/build/
+mobile_app_flutter/.pub/
+mobile_app_flutter/.pub-cache/
+mobile_app_flutter/android/.gradle/
+mobile_app_flutter/android/app/build/
+mobile_app_flutter/windows/flutter/ephemeral/
+*.apk
