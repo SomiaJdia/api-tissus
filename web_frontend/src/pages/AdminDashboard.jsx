@@ -250,8 +250,8 @@ export default function AdminDashboard() {
           <div className="flex items-center space-x-3">
             <div className="bg-indigo-600 text-white p-2 rounded-lg font-bold text-lg">🔬</div>
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Espace Administrateur</h1>
-              <p className="text-xs text-gray-500">Plateforme de Classification de Tissus</p>
+              <h1 className="text-xl font-bold text-gray-800">Mijhar-AI — Administration</h1>
+              <p className="text-xs text-gray-500">Plateforme d'analyse histologique par IA</p>
             </div>
           </div>
           <button 

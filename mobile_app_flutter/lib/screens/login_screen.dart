@@ -218,7 +218,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: const Icon(Icons.biotech, color: Colors.white, size: 44),
               ),
               const SizedBox(height: 24),
-              const Text('HistoClassAI', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Color(0xFF7C3AED), letterSpacing: 0.5)),
+              const Text('Mijhar-AI', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Color(0xFF7C3AED), letterSpacing: 0.5)),
               const SizedBox(height: 6),
               const Text("L'IA au service de l'histologie", style: TextStyle(fontSize: 14, color: Color(0xFF6B7280))),
               const SizedBox(height: 40),

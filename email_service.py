@@ -1,4 +1,4 @@
-﻿import smtplib
+import smtplib
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -23,17 +23,17 @@ def envoyer_email_identifiants(email_destinataire: str, nom: str, mot_de_passe_g
     msg = MIMEMultipart()
     msg['From'] = SMTP_USER
     msg['To'] = email_destinataire
-    msg['Subject'] = "Vos identifiants de connexion - Plateforme HistoClassAI"
+    msg['Subject'] = "Vos identifiants de connexion - Plateforme Mijhar-AI"
     
     body = (
         f"Bonjour {nom},\n\n"
-        f"Votre compte a été créé avec succès sur la plateforme HistoClassAI.\n\n"
+        f"Votre compte a été créé avec succès sur la plateforme Mijhar-AI.\n\n"
         f"Voici vos identifiants pour vous connecter et découvrir l'application :\n"
         f"Email : {email_destinataire}\n"
         f"Mot de passe temporaire : {mot_de_passe_genere}\n\n"
         f"Lors de votre première connexion, il vous sera demandé de modifier votre mot de passe.\n\n"
         f"Cordialement,\n"
-        f"L'équipe HistoClassAI"
+        f"L'équipe Mijhar-AI"
     )
         
     msg.attach(MIMEText(body, 'plain', 'utf-8'))

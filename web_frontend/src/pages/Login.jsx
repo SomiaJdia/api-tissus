@@ -41,9 +41,15 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Tissus App</h2>
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-600 text-white text-3xl rounded-2xl shadow-lg shadow-indigo-200 mb-3">
+            🔬
+          </div>
+          <h2 className="text-3xl font-bold text-gray-900">Mijhar-AI</h2>
+          <p className="text-sm text-gray-500 mt-1">L'IA au service de l'histologie</p>
+        </div>
         
         {error && (
           <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm">

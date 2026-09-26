@@ -269,7 +269,7 @@ export default function ProfDashboard() {
           <div className="flex items-center space-x-3">
             <div className="bg-indigo-600 text-white p-2 rounded-lg font-bold text-lg">🔬</div>
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Espace Professeur</h1>
+              <h1 className="text-xl font-bold text-gray-800">Mijhar-AI — Espace Professeur</h1>
               <p className="text-xs text-gray-500">Gestion des Étudiants et Consultation des Tissus</p>
             </div>
           </div>
