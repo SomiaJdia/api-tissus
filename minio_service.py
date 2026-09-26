@@ -94,6 +94,8 @@ def initialiser_bucket() -> bool:
         return False
 
 def uploader_image_tissu(image_bytes: bytes, nom_classe: str = "INCONNU", extension: str = "jpg") -> str | None:
+    if 'localhost' in MINIO_ENDPOINT and os.getenv('DATABASE_URL'):
+        return None
     try:
         horodatage = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         identifiant = uuid.uuid4().hex[:8]
